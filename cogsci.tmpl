@@ -1,0 +1,106 @@
+% Template for Cogsci submission with R Markdown
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage{cogsci}  % cogsci.sty in current directory
+
+\usepackage{pslatex}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{natbib}
+
+% Configure figure label to "Fig. #"
+\DeclareCaptionLabelFormat{fig}{#1#2}
+\captionsetup[figure]{labelformat=fig,labelfont=bf,labelsep=period,name=Figure\ }
+
+\DeclareCaptionLabelFormat{tab}{#1#2}
+\captionsetup[table]{labelformat=tab,labelfont=bf,labelsep=period,name=Table\ }
+
+% Tighter grouping of figures.
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\floatpagefraction}{0.8}
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% amsmath package, useful for mathematical formulas
+\usepackage{amsmath}
+
+% amssymb package, useful for mathematical symbols
+\usepackage{amssymb}
+
+% hyperref package, useful for hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks
+}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+
+% Sweave(-like)
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{}
+\newenvironment{CodeChunk}{}{}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+\usepackage{color}
+
+
+
+% % Text layout
+% \topmargin 0.0cm
+% \oddsidemargin 0.5cm
+% \evensidemargin 0.5cm
+% \textwidth 16cm
+% \textheight 21cm
+
+\title{$title$}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\author{
+  $for(author)$
+    {\large \bf $author.name$} \\
+    $author.email$ \\
+    $author.department$ \\
+    $author.university$
+    $if(author.last)$
+    $else$
+    \And
+    $endif$
+  $endfor$
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+$abstract$
+
+\textbf{Keywords:}
+$keywords$
+\end{abstract}
+
+$body$
+
+\setlength{\parindent}{-0.1in}
+\setlength{\leftskip}{0.125in}
+\noindent
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
