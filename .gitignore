@@ -1,4 +1,5 @@
 *.tex
+*.log
 *_files/
 *_cache/
 

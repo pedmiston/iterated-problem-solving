@@ -1,0 +1,49 @@
+---
+title: Cumulative improvements in iterated problem solving
+author: Pierce Edmiston, Maxime Derex, Gary Lupyan
+bibliography: references.bib
+csl: apa.csl
+output:
+  beamer_presentation:
+    theme: metropolis
+---
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(crotchet)
+opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE)
+theme_set(theme_minimal(base_size = 20))
+```
+
+# The cultural inheritance of problem solving knowledge
+
+Why are humans effective problem solvers?
+
+- We evolved specialized intelligences [@Pinker:2010gw].
+- We developed systems of cultural inheritance [@Boyd:2011gp].
+
+# Lost European explorer experiments[^lostexplorer]
+
+```{r nardoo, out.height="40%", fig.cap="The nardoo acquatic fern, native to Australia."}
+crotchet::draw_image("img/nardoo.jpg")
+```
+
+> [S]tarvation on nardoo is by no means unpleasant, but for the weakness one
+  feels, and the utter inability to move oneself, for as the appetite is
+  concerned, it gives me the greatest satisfaction.
+
+[^lostexplorer]: [@Boyd:2018diff; @Boyd:2011gp; @Henrich:2015srt]
+
+# The adaptiveness of cultural inheritance[^br]
+
+Cultural inheritance is adaptive because **even smart people die.**  
+Cultural inheritance enables problem solving to extend far longer than any lifetime.  
+
+[^br]: [@Boyd:1985cu; @Richerson:2005not]
+
+# References {.allowframebreaks}
+
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.25in}
+\noindent
+\footnotesize
