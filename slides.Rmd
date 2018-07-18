@@ -37,10 +37,12 @@ Today I'm going to tell you about some research that I've been working on
 with Max Derex and Gary Lupyan that is related to one of the big questions
 in how we understand human evolution.
 
-Humans are incredibly effective problem solvers, having solved a wide variety
-of problems necessary for survival in nearly every terrestrial environment on
-the planet. No other single species can survive in such a wide variety of
-environmental conditions. So why are humans such effective problem solvers?
+Humans are incredibly effective problem solvers. Some of the clearest
+evidence of this is the fact that humans have been able to solve the
+problems necessary for survival in nearly every terrestrial environment
+on the planet. No other single species comes close to being able to
+survive in such a wide variety of environmental conditions.
+So what makes humans such effective problem solvers?
 
 One answer to this question is that we have evolved specialized intelligences.
 On this view, we are effective problem solvers because we have specialized
@@ -164,6 +166,10 @@ digraph {
 - knapping stone tools
 - building baskets
 - solving puzzles on a computer
+
+# How likely are future generations to exceed their ancestors?
+
+- Does cultural inheritance accumulate additively?
 
 # The Totem Game [@Derex:2015cbb]
 
