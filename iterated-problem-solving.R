@@ -11,8 +11,10 @@ library(totems)
 library(tidyverse) # Load tidyverse after totems to prevent dplyr::filter from being masked
 t_ <- load_totems_theme()
 
-t_$base_theme <- t_$base_theme +
-  theme(text = element_text(family = "serif"))
+#t_$base_theme <- t_$base_theme +
+#  theme(text = element_text(family = "serif"))
+
+theme_set(t_$base_theme)
 
 # List to hold descriptives for in-text citation
 exp1 <- list()
@@ -277,7 +279,6 @@ learning_times_plot <- ggplot(StageTimes) +
   scale_x_continuous("Learning period (min)", breaks = seq(0, 25, by = 5)) +
   ylab("Count") +
   scale_fill_manual(values = t_$color_picker(c("blue", "orange"))) +
-  t_$base_theme +
   theme(legend.position = "none")
 
 # Learning rates ----
@@ -301,7 +302,6 @@ learning_rates_plot <- ggplot(LearningRates) +
   scale_x_continuous("Tools inherited") +
   scale_y_continuous("Learning time (min)", breaks = seq(0, 25, by = 5)) +
   t_$scale_shape_outlier +
-  t_$base_theme +
   guides(shape = "none")
 
 # New innovations ----
@@ -334,7 +334,6 @@ innovations_created_and_inherited_plot <- ggplot(NewInnovations) +
   geom_abline(intercept = 0, slope = 1, linetype = 2, size = 0.5) +
   scale_x_continuous("Tools inherited") +
   scale_y_continuous("Tools created") +
-  t_$base_theme +
   guides(shape = "none")
 
 new_innovations_mod <- lmer(
@@ -360,8 +359,7 @@ new_innovations_plot <- ggplot(NewInnovations) +
   scale_alpha_outlier +
   scale_x_continuous("Tools inherited") +
   scale_y_continuous("New tools discovered") +
-  guides(shape = "none", alpha = "none") +
-  t_$base_theme
+  guides(shape = "none", alpha = "none")
 
 # Page's trend test ----
 data("Guesses")
@@ -424,7 +422,6 @@ innovations_by_generation_plot <- ggplot(Innovations) +
                 data = innovations_by_generation_preds,
                 color = "black", width = 0.15, size = 1.0) +
   t_$scale_y_num_tools +
-  t_$base_theme +
   theme(
     panel.grid.minor.x = element_blank()
   )
@@ -470,8 +467,7 @@ delta_difficulty_plot <- ggplot(DeltaDifficulty) +
   scale_y_continuous("Change in complexity score") +
   t_$scale_shape_outlier +
   scale_alpha_outlier +
-  guides(shape = "none", alpha = "none") +
-  t_$base_theme
+  guides(shape = "none", alpha = "none")
 
 # Playing time ----
 playing_time_mod <- lmer(
@@ -505,8 +501,7 @@ playing_time_plot <- ggplot(NewInnovations) +
   xlab("Discovery period (min)") +
   ylab("New tools discovered") +
   guides(shape = "none", alpha = "none") +
-  t_$scale_shape_outlier +
-  t_$base_theme
+  t_$scale_shape_outlier
 
 # Guesses per item ----
 data("Guesses")
@@ -567,8 +562,7 @@ guesses_per_item_by_inheritance_plot <- ggplot(CostPerItem50min) +
                 width = 0.05, size = 0.6) +
   scale_x_discrete("", labels = c("Generation 1", "Generations 2-4")) +
   scale_y_continuous("Guesses per tool", breaks = seq(0, 150, by = 25)) +
-  coord_cartesian(ylim = c(0, 150)) +
-  t_$base_theme
+  coord_cartesian(ylim = c(0, 150))
 
 # Guesses per item: Playing ----
 CostPerItem50minPlaying <- GuessesPerItem50min %>%
@@ -617,8 +611,7 @@ guesses_per_new_item_by_inheritance_plot <- ggplot(CostPerItem50minPlaying) +
                 width = 0.05, size = 0.6) +
   scale_x_discrete("", labels = c("Generation 1", "Generations 2-4")) +
   scale_y_continuous("Guesses per tool", breaks = seq(0, 150, by = 25)) +
-  coord_cartesian(ylim = c(0, 150)) +
-  t_$base_theme
+  coord_cartesian(ylim = c(0, 150))
 
 # Guess types ----
 GuessTypes <- Guesses %>%
@@ -687,5 +680,4 @@ prop_guess_types_50min_plot <- ggplot(GuessTypes50minSummary) +
   scale_y_continuous("Proportion of guesses", labels = scales::percent) +
   scale_fill_manual("Guess types",
                     values = t_$color_picker(c("green", "blue", "orange", "pink"))) +
-  t_$base_theme +
   theme(panel.grid.major.x = element_blank())
