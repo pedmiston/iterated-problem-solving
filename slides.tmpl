@@ -319,15 +319,31 @@ $endfor$
 $endif$
 
 %% Customize title page
-\defbeamertemplate*{title page}{customized}[1][]
-{
-  \usebeamerfont{title}\inserttitle\par
-  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
-  \bigskip
-  \usebeamerfont{author}\insertauthor\par
-  \usebeamerfont{institute}\insertinstitute\par
-  \usebeamerfont{date}\insertdate\par
-  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+\renewcommand\titlepage{%
+    \begin{minipage}[b][\paperheight]{\textwidth}
+    \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+    \vfill%
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    \usebeamertemplate*{title separator}
+%    \end{macrocode}
+%
+% Beamer's definition of |\insertauthor| is always nonempty, so we have
+% to test another macro initialized by |\author{...}| to see if the user has
+% defined an author. This solution was suggested by Enrico Gregorio in an
+% answer to \href{https://tex.stackexchange.com/questions/241306/}{this
+% Stack Exchange question}.
+%
+%    \begin{macrocode}
+    \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+    \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+    \href{mailto:pedmiston@wisc.edu}{pedmiston@wisc.edu} \\
+    \href{https://osf.io/vf2wk}{osf.io/vf2wk} \\
+    \href{https://github.com/pedmiston/iterated-problem-solving}{github.com/pedmiston/iterated-problem-solving} \\
+    \vfill
+    \vspace*{1mm}
+  \end{minipage}
 }
 
 $if(title)$
@@ -356,6 +372,7 @@ $endif$
 
 % Use en-dash instead of square for bullets
 \setbeamertemplate{itemize item}{--}
+\setbeamertemplate{itemize subitem}{--}
 
 % Set lists flush left
 \settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
@@ -366,9 +383,6 @@ $if(title)$
 $if(beamer)$
 \begin{frame}
 \titlepage
-\href{mailto:pedmiston@wisc.edu}{pedmiston@wisc.edu} \\
-\href{https://osf.io/vf2wk}{osf.io/vf2wk} \\
-\href{https://github.com/pedmiston/iterated-problem-solving}{github.com/pedmiston/iterated-problem-solving}
 \end{frame}
 $else$
 \maketitle

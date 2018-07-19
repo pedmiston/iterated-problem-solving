@@ -30,7 +30,7 @@ theme_set(t_$base_theme)
 Why are humans effective problem solvers?
 
 - We evolved specialized intelligences [@Pinker:2010gw].
-- **We developed systems of cultural inheritance** (Boyd et al., 2011).
+- We developed systems of cultural inheritance (Boyd et al., 2011).
 
 <!--
 It seems relatively uncontroverial to say that humans are effective problem
@@ -38,12 +38,12 @@ solvers, but it is worth considering what the evidence actually is, that we are
 good at problem solving. One way to think about it, from an evolutionary
 perspective, is that our species, and no other, has been able to solve the
 problems necessary for survival in nearly every terrestrial environment on the
-planet. No other single species comes close. So what are the explanations for
-why humans are so good at problem solving?
+planet. No other single species is able to do this. So what are the
+explanations for why humans are so good at adaptive problem solving?
 
-One answer to this question is that we evolved specialized intelligences.
-On this view, we are effective problem solvers because our brains evolved
-so that individuals could be smart and solve problems on their own.
+One answer to this question is that we evolved specialized intelligences. On
+this view, we are effective problem solvers because our brains evolved so that
+individuals could be smart and solve different kinds of problems on their own.
 
 An alternative view is that we owe our success in problem solving in large
 part to our systems of cultural inheritance. On this view, it's not our
@@ -54,12 +54,15 @@ problem solvers. Humans may be smart, but cultures are smarter.
 
 # Lost European explorer experiments[^lostexplorer]
 
-> Starvation on nardoo is by no means unpleasant, but for the weakness one
+> "Starvation on nardoo is by no means unpleasant, but for the weakness one
   feels, and the utter inability to move oneself, for as the appetite is
-  concerned, it gives me the greatest satisfaction.
+  concerned, it gives me the greatest satisfaction."
 
 ```{r nardoo, out.height="40%", fig.cap="The nardoo acquatic fern, native to Australia."}
-crotchet::draw_image("img/nardoo.jpg")
+gridExtra::grid.arrange(crotchet::read_image("img/nardoo-leaves.jpg", width = 0.9),
+                        crotchet::read_image("img/nardoo-seeds.jpg", width = 0.9),
+                        nrow = 1,
+                        widths = c(0.467, 0.533))
 ```
 
 [^lostexplorer]: [@Boyd:2018diff; @Boyd:2011gp; @Henrich:2015srt]
@@ -92,9 +95,9 @@ odd it was to die of starvation with a full belly.
   feels, and the utter inability to move oneself, for as the appetite is
   concerned, it gives me the greatest satisfaction.
 
-The Lost European explorer experiments demonstrate that cultures seem to be
-better at solving the problems necessary for survival than any individual
-plopped down in the same environmental conditions.
+The Lost European explorer experiments demonstrate that in some cases cultures
+seem to be better at solving problems than any individual plopped down in the
+same environmental conditions.
 -->
 
 # The adaptiveness of cultural inheritance[^br]
@@ -130,31 +133,188 @@ Why is cultural inheritance adaptive? Why is it more beneficial to be able to
 copy someone else than it is to be able to solve problems as individuals?
 
 One of the basic arguments given for why cultural inheritance is adaptive is
-that even smart people die.
+that even smart people die. If you cannot copy, you can only accomplish so much
+on your own in a single lifetime, no matter how smart you are. If you can copy,
+you can instead spend your life improving what other people invented. What this
+means is that problem solving can extend far longer than any single lifetime.
+Eventually, cultures can solve problems that individuals cannot.
 
-If you cannot copy, you can only accomplish so much on your own in a single
-lifetime, no matter how smart you are. If you can copy, you can instead spend
-your life improving what other people invented.
-
-What this means is that problem solving can extend far longer than any single
-lifetime. Eventually, cultures can solve problems that individuals cannot.
+This argument makes sense to me, but it also assumes something that I think
+should not be ignored, and that is that, on this view, problem solving is
+relatively unaffected by cultural inheritance. A person in generation 1 has the
+same problem solving capacity as a person in generation 4. All cultural
+inheritance gives you is a head start or shortcut to individual learning.
 -->
 
-# How likely are future generations to exceed their ancestors?
+# Variable acquisition costs[^var]
 
-- Does cultural inheritance accumulate additively?
+```{r mesoudi-2011-fig2a}
+crotchet::draw_image("img/mesoudi-2011-fig2a.png")
+```
+
+[^var]: [Fig. 2A, @Mesoudi:2011fn]
+
+<!--
+There is some evidence to think that cultural inheritance should not accumulate
+indefinitely. The main reason is that each new generation has more to learn.
+Here's a figure showing the relationship between when a mathematical concept
+was originally discovered and the age at which that concept is conventionally
+learned. The basic idea is that masters students in mathematics, in their early
+20s, are still learning ideas that may be over 100 years old.
+
+If these variable acquisition costs constrain culutural accumulation, than we
+might expect the benefits of cultural inheritance to diminish over generations.
+Cultural inheritance may give a head start in the short run, but eventually
+it has a diminishing return, and may not be helpful anymore.
+-->
+
+# How much of a head start can be given to future generations?
+
+```{r cumulative-culture, engine="dot"}
+digraph {
+    rankdir = LR
+    node[shape=circle style=filled label=""]
+    bgcolor="transparent"
+    
+    d1 -> d2 -> d3 -> d4 -> d5
+    d5[style=invis]
+
+    d1[fillcolor="#7483A7"];
+    d2[fillcolor="#8DA0CB"];
+    d3[fillcolor="#A1B1D4"];
+    d4[fillcolor="#B6C2DD"];
+}
+```
+
+Experimental models of cumulative culture:
+
+- building paper airplanes
+- knapping stone tools
+- constructing baskets
+- solving puzzles on a computer
+
+<!--
+The purpose of my research was to better understand this question: how much
+of a head start can be given to future generations?
+
+The idea that each new generation is able to build upon the accomplishments
+of the previous one is generally known as "cumulative culture". Cumulative
+culture seems obvious looking around today. Technologies like cars, computers,
+and spaceships are only possible because of generations of accumulated
+innovations. But it's only recently that we have really tried to establish
+good experimental models of cumulative culture. While we all may agree that
+cumulative culture occurs at the longest timescales, it's still an open
+question whether we learn anything about human problem solving by studying
+cumulative culture at the shortest timescales.
+
+Previous experiments investigating cumulative culture have used a number of
+different experimental models. For example, if you watch someone build a paper
+airplane and fly it, and then you attempt the same task, chances are you can
+build a paper airplane that will fly a bit further than your ancestor, at least
+through a handful of generations.
+
+This sort of accumulation depends heavily on the task, of course. People
+have also done experiments where participants learn how to knap stone tools,
+which is a much more complicated task than building a paper airplane.
+For these experiments, participants don't improve upon the stone tool design,
+but we are able to better understand how reliably skills are passed on
+to the next generation.
+
+Most recently, experimental models of cumulative culture have started to
+look more like cognitive psychology experiments in that they have people
+solve puzzles on a computer where aspects of the problem solving task can
+be more tightly controlled than in an experiment involving the creation
+of physical artifacts.
+-->
 
 # The Totem Game [@Derex:2015cbb]
 
-```{r gameplay}
-crotchet::draw_image("gameplay", package = "totems")
+```{r gameplay, out.height="90%"}
+draw_image("gameplay", package = "totems")
 ```
+
+<!--
+An example of this is the Totem game. In the Totem game, participants attempt
+to build a totem pole first by combining these resources to make tools, and using
+those tools to create other tools, and so on and so on, until they can chop
+down a tree, and carve and paint a totem pole.
+
+In this game, most of the combinations participants try do not yield new tools,
+and so the test is how effectively participants can search the space of possible
+combinations without making the same incorrect guesses over and over again.
+-->
 
 # Solution landscape
 
-```{r landscape-sample, out.height="90%"}
-draw_image("landscape-sample.gv", package = "totems")
+```{r landscape, out.height="80%"}
+gridExtra::grid.arrange(
+  crotchet::read_image("landscape-sample.gv", package = "totems"),
+  crotchet::read_image("recipes.gv", package = "totems"),
+  nrow = 1
+)
 ```
+
+<!--
+What makes this game interesting is that as tools are accumulated, the space
+of possible combinations increases exponentially.
+
+Here I'm showing the first 6 generations of tools, leading to the first axe,
+which is required to make the simplest kind of totem pole. The landscape goes
+on beyond this point, but in reality, in just 25 minutes, participants have
+a hard time getting even this far.
+
+On the right, I'm showing the recipes for the tools: the combinations of items
+participants had to make in order to discover the tool. So first they had to
+combine two stones to make a more refined rock, and a stone with an antler
+to make a club, and so one. Some items could be refined all by themselves,
+so you could break a branch off a tree, and refine a branch into a stick by
+trying these items individually. Most tools involved the combination of between
+2 and 3 items.
+
+Presumably, with more items, the game gets harder and harder, so we can ask
+how individuals who inherit a bunch of items from an ancestor are able to
+exceed them. Are they able to overcome the acquisition cost of recreating
+the previous tools?
+-->
+
+# Methods
+
+```{r cumulative-culture, engine="dot"}
+```
+
+- 42 complete chains (_N_=168 participants).
+- Each participant played the Totem game for 25 minutes.
+- Participants in Gen. 2-4 inherited **recipes** from their ancestor.
+
+**Research questions**
+
+1. How likely are future generations to exceed their ancestors?
+2. Does inheritance have an impact on new tool discovery?
+
+<!--
+In this experiment, we recruited 168 participants and assigned them to 42
+complete four-generation chains. Each participant played the Totem game for 25
+minutes. Participants in Generation 2 through 4 started off with the
+**recipes** for all tools discovered by their ancestor. So they could see
+which tools their ancestors had discovered, and they could click on them
+to see the combinations that created them.
+
+This is important because by inheriting the recipes, and not the tools,
+the first thing each participant had to do was recreate the tools discovered
+by their ancestor before they could attempt any new tools.
+
+My main research question was how learning from someone else's successes was
+different than discovering the same tools individually. I asked this in two
+ways.
+
+First, I asked how likely future generations are to exceed their ancestors.
+After recreating the previous tools, can they continue on and discover new
+ones, or do they just become stuck because they have too many items.
+
+Second, I asked whether inheriting has any impact on new tool discovery, so
+after recreating tools discovered by someone else, is your rate of new tool
+discovery affected?
+-->
 
 # Tools by generation
 
@@ -162,15 +322,40 @@ draw_image("landscape-sample.gv", package = "totems")
 innovations_by_generation_plot
 ```
 
+<!--
+First I'll just show you the results by generation. So here each thin line is a
+chain, and you can see that each generation tended to discover more tools in 25
+minutes than their ancestor.
+
+You can see that this is a quadratic fit, indicating that later generations had
+a harder time exceeding their ancestors than earlier generations.
+-->
+
 # Tools by inheritance size
 
 ```{r fig4}
 grid.arrange(
-  innovations_created_and_inherited_plot + ggtitle("A"),
-  new_innovations_plot + ggtitle("B"),
+  innovations_created_and_inherited_plot,
+  new_innovations_plot,
   ncol = 2
 )
 ```
+
+<!--
+Next I'm going to show you the same data, but this time based on the number
+of inherited items, rather than by generation. The reason is that there is
+no difference between a second generation participant inheriting 6 tools and
+a fourth generation participant inheriting the same 6 tools.
+
+On the left you can see the relationship between number of items inherited
+and number to tools discovered. The dotted line is a reference line with a
+slope of 1, so people who fall along that line recreated the tools they
+inherited but were unable to create any new tools. As you can see, most of
+the points are above the line, but to get a better sense of the relationship,
+look on the right, where the same reference line is now horizontal, and you
+can see the negative slope best fit line, indicating that as participants
+inherited more tools, they had a harder time exceeding those tools.
+-->
 
 # Learning times
 
@@ -178,40 +363,114 @@ grid.arrange(
 learning_rates_plot
 ```
 
+<!--
+Now I want to dig in to what explains why inheriting more tools seemed to
+decrease future problem solving ability.
+
+The first way to do this is to take into account how much time in the 25 minute
+session participants spent recreating existing tools as opposed to discovering
+new ones.
+
+Here I'm showing you the relationship between the size of the inheritance,
+and the amount of time spent recreating the inherited tools, and you can see
+the expected positive relationship, indicating that more tools took proportionally
+longer to recreate.
+-->
+
 # Discovery rates
 
 ```{r fig6, fig.width=5, fig.height=5, out.height="90%"}
 playing_time_plot
 ```
 
+<!--
+Now we can ask how effectively participants were able to discover new tools
+taking into account how much time it took them to recreate the old tools.
+
+Here I'm showing that people who had more time to discover new tools tended
+to discover more tools, but what's interesting is that the slope of this line
+does not vary based on the number of tools that were inherited. That suggests
+that even participants who inherited a bunch of tools were not any slower
+at discovering new tools, they just had less time to do so.
+-->
+
 # Guesses per tool
 
 ```{r fig7}
 grid.arrange(
-  guesses_per_item_by_inheritance_plot + ggtitle("A"),
-  guesses_per_new_item_by_inheritance_plot + ggtitle("B"),
+  guesses_per_item_by_inheritance_plot + ggtitle("Inherited tools"),
+  guesses_per_new_item_by_inheritance_plot + ggtitle("Discovered tools"),
   ncol = 2
 )
 ```
 
-# Diachronic collaboration experiment summary
+<!--
+The last analysis I'll show breaks things down further by the number of guesses
+made for each tool. In the previous analyses, I treated all tools the same,
+but here I'm saying, for each tool, from the moment at which the tool was available
+to be discovered, how many guesses did it take to discover it.
+
+Here I've split things up based on whether the tool was inherited from an ancestor,
+or it had to be discovered new. So on the left, you can see the benefit of inheriting.
+Each line is a tool, and participants who inherited the recipes for those tools
+were able to recreate those tools very quickly.
+
+But the interesting test is on the right. Here I'm asking whether learning from
+someone else's solutions gave you any sort of insight into the discovery of new
+tools as opposed to discovering all tools on your own. The lack of an effect
+here is interesting because it indicates that inheriting from an ancestor does
+not have an impact on future problem solving.
+-->
+
+# Summary
 
 1. How likely were participants able to exceed their ancestors?
-    - Participants were able to solve more problems in 25 minutes than their ancestors.
+  - Participants were able to solve more problems in 25 minutes than their ancestors.
 2. Does inheritance have an impact on new tool discovery?
-    - No effect on the rate of new tool discovery.
-    - No effect on the number of guesses required for new tools.
+  - No effect on the rate of new tool discovery.
+  - No effect on the number of guesses required for new tools.
 
-**Limitation:** How does diachronic collaboration compare to alternative strategies?
+<!--
+To wrap things up, I found that participants were able to solve more problems in 25 minutes
+than their ancestors. This type of iterated problem solving is known to be an important
+factor in human evolution, and here we've added to our understanding of how problem solving
+knowledge accumulates over generations.
 
+To me the more interesting question is whether we can detect an impact of inheritance on
+new tool discovery. However, we didn't find any effects on the rate of new tool discovery,
+and neither did we find an effect on the number of guesses required for new tools.
+-->
 
-# Summary: Totem game
+# Limitations and future directions
 
-1. Diachronic collaborators are able to exceed their ancestors.
-2. Simple diachronic collaboration is comparable to alternatives.
-3. Diachronic collaboration may reduce the cost of fixation.
-4. Diachronic collaboration may be more scalable than synchronic
-   collaboration.
+How does iterated problem solving compare to alternative strategies?
+
+- Is it better to pass on to the next generation or continue on individually?
+- Is it better to work in sequence or in parallel?
+
+```{r team-structures, out.height="60%", fig.align="center"}
+crotchet::draw_graphviz("team-structures", package = "totems")
+```
+
+<!--
+This work is just starting, I want to briefly mention some of the other
+questions we have using this paradigm. The main limitation to me is that we
+might get more understanding about iterated problem solving if we compare an
+iterated strategy to alternative ways of solving the same set of problems. That
+allows us to answer questions like: Is it better to pass on to the next
+generation or continue on individually? and Is it better to work in sequence or
+in parallel?
+
+I have some of these results, but didn't have time to talk about them here,
+so if you are interested in them, please feel free to ask me about them after.
+-->
+
+# Cumulative improvements in iterated problem solving
+
+**Pierce Edmiston**, Max Derex, Gary Lupyan  
+pedmiston@wisc.edu  
+osf.io/vf2wk  
+[github.com/pedmiston/iterated-problem-solving](https://github.com/pedmiston/iterated-problem-solving)
 
 # References {.allowframebreaks}
 
