@@ -30,23 +30,20 @@ theme_set(t_$base_theme)
 Why are humans effective problem solvers?
 
 - We evolved specialized intelligences [@Pinker:2010gw].
-- We developed systems of cultural inheritance (Boyd et al., 2011).
+- **We developed systems of cultural inheritance** (Boyd et al., 2011).
 
 <!--
-Today I'm going to tell you about some research that I've been working on
-with Max Derex and Gary Lupyan that is related to one of the big questions
-in how we understand human evolution.
+It seems relatively uncontroverial to say that humans are effective problem
+solvers, but it is worth considering what the evidence actually is, that we are
+good at problem solving. One way to think about it, from an evolutionary
+perspective, is that our species, and no other, has been able to solve the
+problems necessary for survival in nearly every terrestrial environment on the
+planet. No other single species comes close. So what are the explanations for
+why humans are so good at problem solving?
 
-Humans are incredibly effective problem solvers. Some of the clearest
-evidence of this is the fact that humans have been able to solve the
-problems necessary for survival in nearly every terrestrial environment
-on the planet. No other single species comes close to being able to
-survive in such a wide variety of environmental conditions.
-So what makes humans such effective problem solvers?
-
-One answer to this question is that we have evolved specialized intelligences.
-On this view, we are effective problem solvers because we have specialized
-brains that enable individuals to be smart and solve problems on their own.
+One answer to this question is that we evolved specialized intelligences.
+On this view, we are effective problem solvers because our brains evolved
+so that individuals could be smart and solve problems on their own.
 
 An alternative view is that we owe our success in problem solving in large
 part to our systems of cultural inheritance. On this view, it's not our
@@ -143,30 +140,6 @@ What this means is that problem solving can extend far longer than any single
 lifetime. Eventually, cultures can solve problems that individuals cannot.
 -->
 
-# Experimental models of cumulative culture
-
-How likely are future generations to exceed their ancestors?
-
-```{r diachronic, engine="dot"}
-digraph {
-    rankdir = LR
-    node[shape=circle style=filled label=""]
-    bgcolor="transparent"
-    
-    d1 -> d2 -> d3 -> d4 -> d5
-    d5[style=invis]
-
-    d1[fillcolor="#7483A7"];
-    d2[fillcolor="#8DA0CB"];
-    d3[fillcolor="#A1B1D4"];
-    d4[fillcolor="#B6C2DD"];
-}
-```
-
-- knapping stone tools
-- building baskets
-- solving puzzles on a computer
-
 # How likely are future generations to exceed their ancestors?
 
 - Does cultural inheritance accumulate additively?
@@ -220,6 +193,25 @@ grid.arrange(
   ncol = 2
 )
 ```
+
+# Diachronic collaboration experiment summary
+
+1. How likely were participants able to exceed their ancestors?
+    - Participants were able to solve more problems in 25 minutes than their ancestors.
+2. Does inheritance have an impact on new tool discovery?
+    - No effect on the rate of new tool discovery.
+    - No effect on the number of guesses required for new tools.
+
+**Limitation:** How does diachronic collaboration compare to alternative strategies?
+
+
+# Summary: Totem game
+
+1. Diachronic collaborators are able to exceed their ancestors.
+2. Simple diachronic collaboration is comparable to alternatives.
+3. Diachronic collaboration may reduce the cost of fixation.
+4. Diachronic collaboration may be more scalable than synchronic
+   collaboration.
 
 # References {.allowframebreaks}
 
