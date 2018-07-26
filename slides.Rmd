@@ -468,7 +468,7 @@ new tool discovery. However, we didn't find any effects on the rate of new tool 
 and neither did we find an effect on the number of guesses required for new tools.
 -->
 
-# Limitations and future directions
+# Why isn't this the complete story?
 
 How does iterated problem solving compare to alternative strategies?
 
