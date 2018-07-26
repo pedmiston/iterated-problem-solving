@@ -32,23 +32,34 @@ Why are humans effective problem solvers?
 - We evolved specialized intelligences [@Pinker:2010gw].
 - We developed systems of cultural inheritance (Boyd et al., 2011).
 
+```{r human-environments, fig.height=5, fig.cap="Human settlements in the Moroccan desert, the Brazilian rainforest, and the Canadian arctic."}
+gridExtra::grid.arrange(
+  crotchet::read_image("img/moroccan-desert.jpg", width = 0.9),
+  crotchet::read_image("img/amazon-rainforest.jpg", width = 0.9),
+  crotchet::read_image("img/inuit-arctic.jpg", width = 0.9),
+  nrow = 1
+)
+```
+
 <!--
 It seems relatively uncontroverial to say that humans are effective problem
 solvers, but it is worth considering what the evidence actually is, that we are
 good at problem solving. One way to think about it, from an evolutionary
 perspective, is that our species, and no other, has been able to solve the
 problems necessary for survival in nearly every terrestrial environment on the
-planet. No other single species is able to do this. So what are the
-explanations for why humans are so good at adaptive problem solving?
+planet. Here I'm showing a few examples: human settlements in the Moroccan
+desert, the Brazilian rainforest, and the Canadian arctic. No other single
+species is able to do this. So what are the explanations for why humans are so
+good at solving different kinds of problems?
 
 One answer to this question is that we evolved specialized intelligences. On
 this view, we are effective problem solvers because our brains evolved so that
 individuals could be smart and solve different kinds of problems on their own.
 
-An alternative view is that we owe our success in problem solving in large
-part to our systems of cultural inheritance. On this view, it's not our
-ability to solve problems as individuals that is all that impressive.
-Instead, it's our ability to copy other people that makes us adaptive
+An alternative view is that we owe our success in problem solving in large part
+to our systems of cultural inheritance. On this view, it's not our ability to
+solve problems as individuals that is all that impressive. Instead, it's our
+ability to copy other people and benefit from their work that makes us adaptive
 problem solvers. Humans may be smart, but cultures are smarter.
 -->
 
@@ -104,6 +115,7 @@ same environmental conditions.
 
 Cultural inheritance is adaptive because **even smart people die.**  
 Cultural inheritance enables problem solving to extend far longer than any lifetime.  
+_How effectively does problem solving accumulate over generations?_
 
 ```{r adaptiveness, engine="dot"}
 digraph {
@@ -144,9 +156,12 @@ should not be ignored, and that is that, on this view, problem solving is
 relatively unaffected by cultural inheritance. A person in generation 1 has the
 same problem solving capacity as a person in generation 4. All cultural
 inheritance gives you is a head start or shortcut to individual learning.
+
+The question I am interested in is this: How effectively does problem solving
+accumulate over generations?
 -->
 
-# Variable acquisition costs[^var]
+# Increasing acquisition costs[^var]
 
 ```{r mesoudi-2011-fig2a}
 crotchet::draw_image("img/mesoudi-2011-fig2a.png")
@@ -155,20 +170,32 @@ crotchet::draw_image("img/mesoudi-2011-fig2a.png")
 [^var]: [Fig. 2A, @Mesoudi:2011fn]
 
 <!--
-There is some evidence to think that cultural inheritance should not accumulate
-indefinitely. The main reason is that each new generation has more to learn.
-Here's a figure showing the relationship between when a mathematical concept
-was originally discovered and the age at which that concept is conventionally
-learned. The basic idea is that masters students in mathematics, in their early
-20s, are still learning ideas that may be over 100 years old.
+One reason why cultural inheritance may not accumulate effectively over generations
+is related to the idea of increasing acquisition costs. This is the idea that
+before you can solve any new problems, first you have to re-learn what everyone
+before you has already done. As the amount you need to re-learn increases,
+you have less time to discover new things.
 
-If these variable acquisition costs constrain culutural accumulation, than we
-might expect the benefits of cultural inheritance to diminish over generations.
-Cultural inheritance may give a head start in the short run, but eventually
-it has a diminishing return, and may not be helpful anymore.
+Here's a figure from a paper by Alex Mesoudi showing the relationship between
+when a mathematical concept was originally discovered and the age at which that
+concept is conventionally learned. Note that the x-axis is logorithmic. The
+basic idea is that masters students in mathematics, in their early 20s, are
+still learning ideas that may be over 100 years old, in part because they
+need to learn the foundations of mathematics before they can learn the most
+recent innovations.
+
+Whether this sort of historical recapitulation is necessary for educational
+practice is debatable, but what I want you to take away from this example is
+that there are two things going on with cultural inheritance: the first is
+learning what has been done previously, and the second is improving or
+extending previous work.
+
+So we can ask which is more likely to constrain cultural accumulation:
+is it the increasing cost of acquiring previous knowledge, or is it
+the inability to discover new things?
 -->
 
-# How much of a head start can be given to future generations?
+# How does problem solving accumulate?
 
 ```{r cumulative-culture, engine="dot"}
 digraph {
