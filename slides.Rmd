@@ -42,19 +42,22 @@ gridExtra::grid.arrange(
 ```
 
 <!--
-It seems relatively uncontroverial to say that humans are effective problem
+It seems relatively uncontroverial to say that humans are good problem
 solvers, but it is worth considering what the evidence actually is, that we are
 good at problem solving. One way to think about it, from an evolutionary
 perspective, is that our species, and no other, has been able to solve the
 problems necessary for survival in nearly every terrestrial environment on the
-planet. Here I'm showing a few examples: human settlements in the Moroccan
-desert, the Brazilian rainforest, and the Canadian arctic. No other single
-species is able to do this. So what are the explanations for why humans are so
-good at solving different kinds of problems?
+planet.
+
+Here are just a few examples: human settlements in the Moroccan desert, the
+Brazilian rainforest, and the Canadian arctic. No other single species is able
+to survive in such diverse environments. So what are the explanations for why
+humans are so good at solving different kinds of problems?
 
 One answer to this question is that we evolved specialized intelligences. On
-this view, we are effective problem solvers because our brains evolved so that
-individuals could be smart and solve different kinds of problems on their own.
+this view, we are effective problem solvers because our brains evolved under
+selection pressures to enable individuals to be smart and solve different kinds
+of problems on their own.
 
 An alternative view is that we owe our success in problem solving in large part
 to our systems of cultural inheritance. On this view, it's not our ability to
@@ -155,10 +158,12 @@ This argument makes sense to me, but it also assumes something that I think
 should not be ignored, and that is that, on this view, problem solving is
 relatively unaffected by cultural inheritance. A person in generation 1 has the
 same problem solving capacity as a person in generation 4. All cultural
-inheritance gives you is a head start or shortcut to individual learning.
+inheritance gives you is a head start, but it has no effect on future problem
+solving.
 
-The question I am interested in is this: How effectively does problem solving
-accumulate over generations?
+What I want to do today is convince you that we should not just assume that 
+problem solving adds up over generations, but that we should test how effectively
+problem solving performance improves over generations of repetition.
 -->
 
 # Increasing acquisition costs[^var]
@@ -170,7 +175,7 @@ crotchet::draw_image("img/mesoudi-2011-fig2a.png")
 [^var]: [Fig. 2A, @Mesoudi:2011fn]
 
 <!--
-One reason why cultural inheritance may not accumulate effectively over generations
+One reason why cultural inheritance may not just add up over generations
 is related to the idea of increasing acquisition costs. This is the idea that
 before you can solve any new problems, first you have to re-learn what everyone
 before you has already done. As the amount you need to re-learn increases,
@@ -186,16 +191,11 @@ recent innovations.
 
 Whether this sort of historical recapitulation is necessary for educational
 practice is debatable, but what I want you to take away from this example is
-that there are two things going on with cultural inheritance: the first is
-learning what has been done previously, and the second is improving or
-extending previous work.
-
-So we can ask which is more likely to constrain cultural accumulation:
-is it the increasing cost of acquiring previous knowledge, or is it
-the inability to discover new things?
+that in some cases, before any new progress can be made, new generations first
+have to learn what has been done previously, and this might take a long time.
 -->
 
-# How does problem solving accumulate?
+# How does problem solving performance accumulate?
 
 ```{r cumulative-culture, engine="dot"}
 digraph {
@@ -221,8 +221,8 @@ Experimental models of cumulative culture:
 - solving puzzles on a computer
 
 <!--
-The purpose of my research was to better understand this question: how much
-of a head start can be given to future generations?
+The purpose of my research was to better understand this question: how
+does problem solving accumulate over generations?
 
 The idea that each new generation is able to build upon the accomplishments
 of the previous one is generally known as "cumulative culture". Cumulative
