@@ -8,6 +8,7 @@ output:
   beamer_presentation:
     theme: metropolis
     template: slides.tmpl
+    keep_tex: yes
 nocite: |
   @Boyd:2011gp
 ---
@@ -42,17 +43,17 @@ gridExtra::grid.arrange(
 ```
 
 <!--
-It seems relatively uncontroverial to say that humans are good problem
-solvers, but it is worth considering what the evidence actually is, that we are
-good at problem solving. One way to think about it, from an evolutionary
+It seems relatively uncontroverial to say that humans are good at solving
+problems, but it is worth considering what the evidence actually is, that we
+are good at problem solving. One way to think about it, from an evolutionary
 perspective, is that our species, and no other, has been able to solve the
 problems necessary for survival in nearly every terrestrial environment on the
 planet.
 
 Here are just a few examples: human settlements in the Moroccan desert, the
 Brazilian rainforest, and the Canadian arctic. No other single species is able
-to survive in such diverse environments. So what are the explanations for why
-humans are so good at solving different kinds of problems?
+to survive in such diverse environments. So why are humans are so good at
+solving different kinds of problems?
 
 One answer to this question is that we evolved specialized intelligences. On
 this view, we are effective problem solvers because our brains evolved under
@@ -175,10 +176,10 @@ crotchet::draw_image("img/mesoudi-2011-fig2a.png")
 [^var]: [Fig. 2A, @Mesoudi:2011fn]
 
 <!--
-One reason why cultural inheritance may not just add up over generations
+One reason why we shouldn't expect cultural inheritance to just add up over generations
 is related to the idea of increasing acquisition costs. This is the idea that
 before you can solve any new problems, first you have to re-learn what everyone
-before you has already done. As the amount you need to re-learn increases,
+else has already done. As the amount you need to re-learn increases,
 you have less time to discover new things.
 
 Here's a figure from a paper by Alex Mesoudi showing the relationship between
@@ -189,10 +190,11 @@ still learning ideas that may be over 100 years old, in part because they
 need to learn the foundations of mathematics before they can learn the most
 recent innovations.
 
-Whether this sort of historical recapitulation is necessary for educational
-practice is debatable, but what I want you to take away from this example is
-that in some cases, before any new progress can be made, new generations first
-have to learn what has been done previously, and this might take a long time.
+Whether this sort of historical recapitulation is strictly necessary for
+educational practice is debatable, but what I want you to take away from this
+example is that in some cases, before any new progress can be made, new
+generations first have to learn what has been done previously, and this may
+take an increasing amount of time.
 -->
 
 # How does problem solving performance accumulate?
@@ -262,7 +264,8 @@ draw_image("gameplay", package = "totems")
 
 <!--
 An example of this is the Totem game. In the Totem game, participants attempt
-to build a totem pole first by combining these resources to make tools, and using
+to build a sacred totem to appease the gods. To build a totem pole, first they
+have to combine these resources to make tools, and use
 those tools to create other tools, and so on and so on, until they can chop
 down a tree, and carve and paint a totem pole.
 
@@ -271,32 +274,42 @@ and so the test is how effectively participants can search the space of possible
 combinations without making the same incorrect guesses over and over again.
 -->
 
+# Recipes
+
+```{r recipes}
+crotchet::draw_image("recipes.gv", package = "totems")
+```
+
+<!--
+Here are some of the successful combinations, which I will refer to
+as "recipes". You can see a few different kinds of recipes here,
+some where the same item is combined with itself, others where
+you can refine an item all by itself, but most of the recipes
+involve the combination of 2 to 3 different items.
+
+What's important about these recipes is that they are what
+is inherited by future generations. First generation participants
+had to discover all these recipes on their own, but other
+participants started off with access to the recipes discovered
+by the previous generation. So they could click on an item,
+and see its recipe, so that they could recreate it on their own.
+-->
+
 # Solution landscape
 
 ```{r landscape, out.height="80%"}
-gridExtra::grid.arrange(
-  crotchet::read_image("landscape-sample.gv", package = "totems"),
-  crotchet::read_image("recipes.gv", package = "totems"),
-  nrow = 1
-)
+crotchet::draw_image("landscape-sample.gv", package = "totems")
 ```
 
 <!--
 What makes this game interesting is that as tools are accumulated, the space
-of possible combinations increases exponentially.
+of possible combinations increases exponentially, even though the space
+of correct combinations doesn't.
 
 Here I'm showing the first 6 generations of tools, leading to the first axe,
 which is required to make the simplest kind of totem pole. The landscape goes
 on beyond this point, but in reality, in just 25 minutes, participants have
 a hard time getting even this far.
-
-On the right, I'm showing the recipes for the tools: the combinations of items
-participants had to make in order to discover the tool. So first they had to
-combine two stones to make a more refined rock, and a stone with an antler
-to make a club, and so one. Some items could be refined all by themselves,
-so you could break a branch off a tree, and refine a branch into a stick by
-trying these items individually. Most tools involved the combination of between
-2 and 3 items.
 
 Presumably, with more items, the game gets harder and harder, so we can ask
 how individuals who inherit a bunch of items from an ancestor are able to
@@ -449,13 +462,18 @@ here is interesting because it indicates that inheriting from an ancestor does
 not have an impact on future problem solving.
 -->
 
-# Summary
+# Results
 
 1. How likely were participants able to exceed their ancestors?
   - Participants were able to solve more problems in 25 minutes than their ancestors.
 2. Does inheritance have an impact on new tool discovery?
   - No effect on the rate of new tool discovery.
   - No effect on the number of guesses required for new tools.
+
+**Summary**
+
+- Experimental evidence for increasing acquisition costs constraining cumulative culture.
+- Constraints on information acquisition do not extend to future problem solving.
 
 <!--
 To wrap things up, I found that participants were able to solve more problems in 25 minutes
