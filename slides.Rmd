@@ -1,7 +1,7 @@
 ---
 title: Cumulative improvements in iterated problem solving
-author: 
-  \textbf{Pierce Edmiston}, Maxime Derex, Gary Lupyan
+author:
+  \textbf{Pierce Edmiston}$^1$, Maxime Derex$^2$, Gary Lupyan$^1$
 bibliography: references.bib
 csl: apa.csl
 output:
@@ -126,9 +126,9 @@ digraph {
     rankdir = LR
     node[shape=circle style=filled label=""]
     bgcolor="transparent"
-    
+
     d1, i2  // set row order last to first
-    
+
     d1 -> d2 -> d3 -> d4 -> d5
     i1 -> i2
     d5, i2[style=invis]
@@ -162,7 +162,7 @@ same problem solving capacity as a person in generation 4. All cultural
 inheritance gives you is a head start, but it has no effect on future problem
 solving.
 
-What I want to do today is convince you that we should not just assume that 
+What I want to do today is convince you that we should not just assume that
 problem solving adds up over generations, but that we should test how effectively
 problem solving performance improves over generations of repetition.
 -->
@@ -204,7 +204,7 @@ digraph {
     rankdir = LR
     node[shape=circle style=filled label=""]
     bgcolor="transparent"
-    
+
     d1 -> d2 -> d3 -> d4 -> d5
     d5[style=invis]
 
@@ -276,7 +276,7 @@ combinations without making the same incorrect guesses over and over again.
 
 # Recipes
 
-```{r recipes}
+```{r recipes, out.height="80%"}
 crotchet::draw_image("recipes.gv", package = "totems")
 ```
 
@@ -316,6 +316,7 @@ how individuals who inherit a bunch of items from an ancestor are able to
 exceed them. Are they able to overcome the acquisition cost of recreating
 the previous tools?
 -->
+
 
 # Methods
 
