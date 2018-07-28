@@ -3,6 +3,8 @@
 *_files/
 *_cache/
 
+notes.Rmd
+notes.pdf
 
 .Rproj.user
 .Rhistory
