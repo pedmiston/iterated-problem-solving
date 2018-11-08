@@ -218,7 +218,7 @@ chain. On average, second generation participants were able to discover
 generation for third and fourth generation participants,
 `r exp1$gen0sqr_slope_stats`.
 
-(ref:innovations-by-generation) Tools by generation. Each of the thin blue lines is a chain. The thick black line shows the model predictions with \pm1 standard error.
+(ref:innovations-by-generation) Tools by generation. Each of the thin blue lines is a chain. The thick black line shows the model predictions with $\pm1$ standard error.
 
 ```{r innovations-by-generation, fig.cap="(ref:innovations-by-generation)"}
 innovations_by_generation_plot
@@ -238,7 +238,7 @@ generations, `r exp1$difficulty_by_generation_quad_mod_slope_stats`.
 
 ## Tools by inheritance size {-}
 
-(ref:inheritance-size) Tools by inheritance size. A. Number of tools created relative to those inherited. The dotted line is a reference with slope=1 such that points above the line indicate future generations exceeding their ancestors. B. Number of new tools relative to those inherited. The same reference line is now shown horizontally. The error range shows the model predictions with \pm1 standard error.
+(ref:inheritance-size) Tools by inheritance size. A. Number of tools created relative to those inherited. The dotted line is a reference with slope=1 such that points above the line indicate future generations exceeding their ancestors. B. Number of new tools relative to those inherited. The same reference line is now shown horizontally. The error range shows the model predictions with $\pm1$ standard error.
 
 ```{r inheritance-size, fig.height=6, fig.cap="(ref:inheritance-size)"}
 grid.arrange(
@@ -280,7 +280,7 @@ novel tools from discovery time alone to one predicting novel tools
 from the interaction between discovery time and inheritance size,
 `r exp1$playing_time_modcomp`.
 
-(ref:playing-time) New tool discovery rates. Discovery time is the amount of time out of a 25 minute session dedicated to discovering new innovations that were not discovered by an ancestor. The line shows the predictions of the hierarchical regression model with \pm1 standard error. The slope of this line did not significantly vary based on the number of inherited tools. Participants marked with X's are the same as in Fig. \@ref(fig:learning-rates).
+(ref:playing-time) New tool discovery rates. Discovery time is the amount of time out of a 25 minute session dedicated to discovering new innovations that were not discovered by an ancestor. The line shows the predictions of the hierarchical regression model with $\pm1$ standard error. The slope of this line did not significantly vary based on the number of inherited tools. Participants marked with X's are the same as in Fig. \@ref(fig:learning-rates).
 
 ```{r playing-time, fig.cap="(ref:playing-time)"}
 playing_time_plot
@@ -319,7 +319,7 @@ number of guesses per new tool, `r exp1$guesses_per_new_item_by_inheritance_mod`
 inheritance benefits participants in recreating inherited solutions, it does
 not confer any benefits to future problem solving.
 
-(ref:guesses-per-innovation-1) Guesses per tool by participant generation. Each line is the average number of guesses it took to discover a particular tool. Error bars show \pm1 standard error of the model predictions. A. Inherited tools. B. Discovered tools, not inherited from an ancestor.
+(ref:guesses-per-innovation-1) Guesses per tool by participant generation. Each line is the average number of guesses it took to discover a particular tool. Error bars show $\pm1$ standard error of the model predictions. A. Inherited tools. B. Discovered tools, not inherited from an ancestor.
 
 ```{r guesses-per-innovation-1, fig.height=6, fig.cap="(ref:guesses-per-innovation-1)"}
 grid.arrange(
